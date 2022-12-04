@@ -57,4 +57,12 @@ function getTokenURI(uint256 tokenId) public returns (string memory){
     );
 }
 
+function mint() public {
+    _tokenIds.increment();
+    uint256 newItemId = _tokenIds.current();
+    _safeMint(msg.sender, newItemId);
+    tokenIdtoLevels[newItemId] = 0;
+    _setTokenURI(newItemId, getTokenURI(newItemId));
+}
+
 }
