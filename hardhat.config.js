@@ -1,5 +1,5 @@
 require("dotenv").config();
-require("@nomiclabs/hardhat-waffle");
+require("@nomicfoundation/hardhat-toolbox");
 require("@nomiclabs/hardhat-etherscan");
 
 module.exports = {
